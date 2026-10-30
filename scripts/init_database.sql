@@ -14,7 +14,6 @@ WARNING:
 */
 
 USE master;
-GO
 
 -- Drop and recreate the 'DataWarehouse' database
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
@@ -24,14 +23,16 @@ BEGIN
 END;
 GO
 
--- Create the 'DataWarehouse' database
-CREATE DATABASE DataWarehouse;
+CREATE DATABASE Datawarehouse;
 GO
 
-USE DataWarehouse;
+
+SELECT * FROM sys.databases;
+
+
+USE Datawarehouse;
 GO
 
--- Create Schemas
 CREATE SCHEMA bronze;
 GO
 
@@ -40,3 +41,4 @@ GO
 
 CREATE SCHEMA gold;
 GO
+
